@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My GitHub Website</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #f1f1f1;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        #info-section {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my GitHub Website!</h1>
+    <button id="learn-more-btn">Learn about what this is</button>
+
+    <div id="info-section">
+        <h2>About this Website</h2>
+        <p>This website is a demonstration of a smooth user interface created with HTML, CSS, and JavaScript. It showcases a black background with gray and white elements, and a clickable button that changes the interface when clicked.</p>
+    </div>
+
+    <script>
+        const learnMoreBtn = document.getElementById('learn-more-btn');
+        const infoSection = document.getElementById('info-section');
+
+        learnMoreBtn.addEventListener('click', function() {
+            infoSection.style.display = 'block';
+            learnMoreBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
