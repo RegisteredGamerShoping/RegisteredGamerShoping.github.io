@@ -28,6 +28,7 @@
             cursor: pointer;
             font-size: 18px;
             transition: transform 0.3s ease-in-out;
+            margin-bottom: 10px;
         }
 
         button:hover {
@@ -49,20 +50,39 @@
     <div class="centered">
         <h1>Welcome To RegisteredGamer's Shop</h1>
         <button id="learn-more-btn">Learn about what this is</button>
+        <button id="contact-btn">Contact Us</button>
 
         <div id="info-section">
             <h2>About this Website</h2>
             <p>This website primarily displays items available for purchase from me and my friends, including various products ranging from code to potentially 3d models in the near future.</p>
+        </div>
+
+        <div id="contact-section" style="display: none;">
+            <h2>Contact Information</h2>
+            <p>Email: registeredgamer@example.com</p>
+            <button id="twitter-btn">Twitter</button>
         </div>
     </div>
 
     <script>
         const learnMoreBtn = document.getElementById('learn-more-btn');
         const infoSection = document.getElementById('info-section');
+        const contactBtn = document.getElementById('contact-btn');
+        const contactSection = document.getElementById('contact-section');
+        const twitterBtn = document.getElementById('twitter-btn');
 
         learnMoreBtn.addEventListener('click', function() {
             infoSection.style.display = 'block';
             learnMoreBtn.style.display = 'none';
+        });
+
+        contactBtn.addEventListener('click', function() {
+            contactSection.style.display = 'block';
+            contactBtn.style.display = 'none';
+        });
+
+        twitterBtn.addEventListener('click', function() {
+            window.location.href = 'https://twitter.com/RegisteredGamer';
         });
     </script>
 </body>
