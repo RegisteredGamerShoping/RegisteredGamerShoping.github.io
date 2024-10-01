@@ -9,6 +9,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         h1 {
@@ -22,25 +26,34 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.3s ease-in-out;
         }
 
         button:hover {
             background-color: #444;
+            transform: scale(1.1);
         }
 
         #info-section {
             display: none;
             margin-top: 20px;
         }
+
+        .centered {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome To RegisteredGamer's Shop</h1>
-    <button id="learn-more-btn">Learn about what this is</button>
+    <div class="centered">
+        <h1>Welcome To RegisteredGamer's Shop</h1>
+        <button id="learn-more-btn">Learn about what this is</button>
 
-    <div id="info-section">
-        <h2>About this Website</h2>
-        <p>This website primarily displays items available for purchase from me and my friends, including various products ranging from code to potentially 3d models in the near future.</p>
+        <div id="info-section">
+            <h2>About this Website</h2>
+            <p>This website primarily displays items available for purchase from me and my friends, including various products ranging from code to potentially 3d models in the near future.</p>
+        </div>
     </div>
 
     <script>
