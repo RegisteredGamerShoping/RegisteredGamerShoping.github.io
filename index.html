@@ -1,89 +1,159 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>RegiseredGamer's shop</title>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<!DOCTYPE html> <html> <head> <title>RegiseredGamer's shop</title> <style> body { background-color: #1a1a1a; color: white; font-family: Arial, sans-serif; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    h1 {
+        color: #f1f1f1;
+    }
 
-        h1 {
-            color: #f1f1f1;
-        }
+    button {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 10px;
+    }
 
-        button {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: transform 0.3s ease-in-out;
-            margin-bottom: 10px;
-        }
+    button:hover {
+        background-color: #444;
+        transform: scale(1.1);
+    }
 
-        button:hover {
-            background-color: #444;
-            transform: scale(1.1);
-        }
+    #info-section {
+        display: none;
+        margin-top: 20px;
+    }
 
-        #info-section {
-            display: none;
-            margin-top: 20px;
-        }
+    .centered {
+        text-align: center;
+    }
 
-        .centered {
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="centered">
-        <h1>Welcome To RegisteredGamer's Shop</h1>
-        <button id="learn-more-btn">Learn about what this is</button>
-        <button id="contact-btn">Contact Us</button>
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
 
-        <div id="info-section">
-            <h2>About this Website</h2>
-            <p>This website primarily displays items available for purchase from me and my friends, including various products ranging from code to potentially 3d models in the near future.</p>
-        </div>
+    .image-container img {
+        width: 200px;
+        height: 200px;
+        margin: 0 10px;
+    }
 
-        <div id="contact-section" style="display: none;">
-            <h2>Contact Information</h2>
-            <p>Email: RegisteredGamer@proton.me</p>
-            <button id="twitter-btn">Twitter</button>
-        </div>
+    .image-label {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>    h1 {
+        color: #f1f1f1;
+    }
+
+    button {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 10px;
+    }
+
+    button:hover {
+        background-color: #444;
+        transform: scale(1.1);
+    }
+
+    #info-section {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .image-container img {
+        width: 200px;
+        height: 200px;
+        margin: 0 10px;
+    }
+
+    .image-label {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+</head> <body> <div class="centered"> <h1>Welcome To RegisteredGamer's Shop</h1> <button id="learn-more-btn">Learn about what this is</button> <button id="contact-btn">Contact Us</button> <button id="shop-btn">Shop</button>
+Download
+    <div id="info-section">
+        <h2>About this Website</h2>
+        <p>This website primarily displays items available for purchase from me and my friends, including various products ranging from code to potentially 3d models in the near future.</p>
     </div>
 
-    <script>
-        const learnMoreBtn = document.getElementById('learn-more-btn');
-        const infoSection = document.getElementById('info-section');
-        const contactBtn = document.getElementById('contact-btn');
-        const contactSection = document.getElementById('contact-section');
-        const twitterBtn = document.getElementById('twitter-btn');
+    <div id="contact-section" style="display: none;">
+        <h2>Contact Information</h2>
+        <p>Email: RegisteredGamer@proton.me</p>
+        <button id="twitter-btn">Twitter</button>
+    </div>
 
-        learnMoreBtn.addEventListener('click', function() {
-            infoSection.style.display = 'block';
-            learnMoreBtn.style.display = 'none';
-        });
+    <div id="shop-section" style="display: none;">
+        <h2>Shop</h2>
+        <div class="image-container">
+            <img src="hacking-toolbox.jpg" alt="Hacking Toolbox">
+            <img src="custom-code.jpg" alt="Custom Python Code">
+            <img src="custom-website.jpg" alt="Custom Website">
+        </div>
+        <div class="image-label">
+            <p>Hacking Toolbox</p>
+            <p>Custom Python Code</p>
+            <p>Custom Website</p>
+        </div>
+        <button id="discord-btn">Join Discord</button>
+    </div>
+</div>
 
-        contactBtn.addEventListener('click', function() {
-            contactSection.style.display = 'block';
-            contactBtn.style.display = 'none';
-        });
+<script>
+    const learnMoreBtn = document.getElementById('learn-more-btn');
+    const infoSection = document.getElementById('info-section');
+    const contactBtn = document.getElementById('contact-btn');
+    const contactSection = document.getElementById('contact-section');
+    const twitterBtn = document.getElementById('twitter-btn');
+    const shopBtn = document.getElementById('shop-btn');
+    const shopSection = document.getElementById('shop-section');
+    const discordBtn = document.getElementById('discord-btn');
 
-        twitterBtn.addEventListener('click', function() {
-            window.location.href = 'https://twitter.com/GamerRegistered';
-        });
-    </script>
-</body>
-</html>
+    learnMoreBtn.addEventListener('click', function() {
+        infoSection.style.display = 'block';
+        learnMoreBtn.style.display = 'none';
+    });
+
+    contactBtn.addEventListener('click', function() {
+        contactSection.style.display = 'block';
+        contactBtn.style.display = 'none';
+    });
+
+    twitterBtn.addEventListener('click', function() {
+        window.location.href = 'https://twitter.com/GamerRegistered';
+    });
+
+    shopBtn.addEventListener('click', function() {
+        shopSection.style.display = 'block';
+        shopBtn.style.display = 'none';
+    });
+
+    discordBtn.addEventListener('click', function() {
+        window.location.href = 'https://discord.gg/your-invite-link'; // Replace with your Discord invite link
+    });
+</script>
+</body> </html>
